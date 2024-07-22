@@ -1,0 +1,53 @@
+.edit-set {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.App.day input {
+  background-color: #fff;
+  color: #333;
+}
+
+.App.night input {
+  background-color: #1e1e1e;
+  color: #f8f9fa;
+  border-color: #333;
+}
+
+/* Button Styles */
+button {
+  padding: 10px;
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.App.day button {
+  background-color: #00bcd4;
+  color: #fff;
+}
+
+.App.day button:hover {
+  background-color: #00acc1;
+}
+
+.App.night button {
+  background-color: #003d79;
+  color: #fff;
+}
+
+.App.night button:hover {
+  background-color: #002c54;
+}
