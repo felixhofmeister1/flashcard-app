@@ -2,11 +2,12 @@
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100vh;
   transition: background-color 0.5s ease, color 0.5s ease;
   text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .App.day {
@@ -19,12 +20,47 @@
   color: #f8f9fa;
 }
 
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease, background-image 0.5s ease;
+  width: 300px;
+  height: 150px;
+  font-size: 1.5em;
+  font-weight: bold;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.App.day .theme-toggle {
+  background-color: #e0f7fa;
+  background-image: url('day.jpg');
+  color: #333;
+}
+
+.App.night .theme-toggle {
+  background-color: #003d79;
+  background-image: url('night.jfif');
+  color: #ffffff;
+}
+
 .home {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  margin-top: 20px;
+  padding-top: 200px;
+  margin-top: 180px;
   width: 100%;
 }
 
@@ -69,86 +105,9 @@
   }
 }
 
-.theme-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.5s ease, background-image 0.5s ease;
-  width: 300px;
-  height: 150px;
-  margin-top: 20px;
-  font-size: 1.5em;
-  font-weight: bold;
-  background-size: cover;
-  background-position: center;
-}
-
-.App.day .theme-toggle {
-  background-color: #e0f7fa;
-  background-image: url('day.jpg');
-  color: #333;
-}
-
-.App.day .create-set,
-.App.day .edit-set,
-.App.day .flashcard-container,
-.App.day .modal {
-  background-color: #f5f5f5;
-  color: #333;
-  border: 1px solid #ccc;
-}
-
-.App.day .flashcard-container.known {
-  background-color: #c8e6c9;
-}
-
-.App.day .flashcard-container.unknown {
-  background-color: #ffccbc;
-}
-
-.App.day .button {
-  background-color: #00bcd4;
-  color: #fff;
-}
-
-.App.day .button:hover {
-  background-color: #00acc1;
-}
-
-.App.night .theme-toggle {
-  background-color: #003d79;
-  background-image: url('night.jfif');
-  color: #ffffff;
-}
-
-.App.night .create-set,
-.App.night .edit-set,
-.App.night .flashcard-container,
-.App.night .modal {
-  background-color: #003b4c;
-  color: #ffeb3b;
-  border: 1px solid #003d79;
-}
-
-.App.night .flashcard-container.known {
-  background-color: #002b36;
-}
-
-.App.night .flashcard-container.unknown {
-  background-color: #6a1b9a;
-}
-
-.App.night .button {
-  background-color: #003d79;
-  color: #fff;
-}
-
-.App.night .button:hover {
-  background-color: #002c54;
+.edit-page .theme-toggle, 
+.revise-page .theme-toggle {
+  display: none;
 }
 
 .create-set,
@@ -156,6 +115,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: 200px;
 }
 
 input {
@@ -298,4 +258,4 @@ button:hover {
 
 .know-button:hover {
   background-color: darkgreen;
-} 
+}

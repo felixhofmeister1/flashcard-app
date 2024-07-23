@@ -38,7 +38,7 @@ const ReviseSet = ({ set, onBack }) => {
       setIncorrectCards([]);
       setShowResults(false);
     } else {
-      onBack(); // Go back to the main screen if no more cards
+      onBack(); 
     }
   };
 

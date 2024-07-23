@@ -38,21 +38,23 @@ function App() {
 
   return (
     <div className={`App ${theme}`}>
-      <div className="theme-toggle" onClick={toggleTheme}>
-        <div className="theme-icon">
-          {theme === 'day' ? (
-            <>
-              <span role="img" aria-label="sun">☀️</span>
-              Day Mode
-            </>
-          ) : (
-            <>
-              <span role="img" aria-label="moon">🌙</span>
-              Night Mode
-            </>
-          )}
+      {currentPage === 'home' && (
+        <div className="theme-toggle" onClick={toggleTheme}>
+          <div className="theme-icon">
+            {theme === 'day' ? (
+              <>
+                <span role="img" aria-label="sun">☀️</span>
+                Day Mode
+              </>
+            ) : (
+              <>
+                <span role="img" aria-label="moon">🌙</span>
+                Night Mode
+              </>
+            )}
+          </div>
         </div>
-      </div>
+      )}
 
       {currentPage === 'home' && (
         <div className="home">

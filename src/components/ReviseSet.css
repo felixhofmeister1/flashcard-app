@@ -27,13 +27,20 @@
   color: #333;
 }
 
-.App.day .dont-know-button,
-.App.day .know-button {
-  background-color: #4caf50;
+.App.day .dont-know-button{
+  background-color: #df6641;
   color: #fff;
 }
 
-.App.day .dont-know-button:hover,
+
+.App.day .know-button {
+  background-color: #39ba34;
+  color: #fff;
+}
+
+.App.day .dont-know-button:hover{
+background-color: #8f3e26
+}
 .App.day .know-button:hover {
   background-color: #388e3c;
 }
@@ -73,6 +80,7 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: background-color 0.5s ease, color 0.5s ease;
+  margin-top: 300px;
 }
 
 .App.day .results-screen {
