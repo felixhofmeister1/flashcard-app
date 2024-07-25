@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.e89b4cca.css",
-    "main.js": "/static/js/main.db52093b.js",
-    "static/js/453.82312ab2.chunk.js": "/static/js/453.82312ab2.chunk.js",
-    "static/media/day.jpg": "/static/media/day.c52fd86ca43edf830efc.jpg",
-    "static/media/night.jfif": "/static/media/night.d1f353a736b59b361ab9.jfif",
-    "index.html": "/index.html",
-    "main.e89b4cca.css.map": "/static/css/main.e89b4cca.css.map",
-    "main.db52093b.js.map": "/static/js/main.db52093b.js.map",
-    "453.82312ab2.chunk.js.map": "/static/js/453.82312ab2.chunk.js.map"
+    "main.css": "/flashcard-app/static/css/main.726164f9.css",
+    "main.js": "/flashcard-app/static/js/main.88f995a5.js",
+    "static/js/453.82312ab2.chunk.js": "/flashcard-app/static/js/453.82312ab2.chunk.js",
+    "static/media/day.jpg": "/flashcard-app/static/media/day.c52fd86ca43edf830efc.jpg",
+    "static/media/night.jfif": "/flashcard-app/static/media/night.d1f353a736b59b361ab9.jfif",
+    "index.html": "/flashcard-app/index.html",
+    "main.726164f9.css.map": "/flashcard-app/static/css/main.726164f9.css.map",
+    "main.88f995a5.js.map": "/flashcard-app/static/js/main.88f995a5.js.map",
+    "453.82312ab2.chunk.js.map": "/flashcard-app/static/js/453.82312ab2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e89b4cca.css",
-    "static/js/main.db52093b.js"
+    "static/css/main.726164f9.css",
+    "static/js/main.88f995a5.js"
   ]
 }
