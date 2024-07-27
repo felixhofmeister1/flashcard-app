@@ -11,7 +11,7 @@ const ReviseSet = ({ set, onBack }) => {
   const [incorrectCards, setIncorrectCards] = useState([]);
 
   useEffect(() => {
-    if (isCorrect.length === cardsToRevise.length) {
+    if (isCorrect.length === cardsToRevise.length && cardsToRevise.length > 0) {
       setShowResults(true);
     }
   }, [isCorrect, cardsToRevise]);
@@ -61,8 +61,10 @@ const ReviseSet = ({ set, onBack }) => {
     <div className="revise-set">
       <div className="modal">
         <h2 className="card-number">{`${currentCardIndex + 1} / ${cardsToRevise.length}`}</h2>
-        {cardsToRevise.length > 0 && currentCardIndex < cardsToRevise.length && (
+        {cardsToRevise.length > 0 && currentCardIndex < cardsToRevise.length ? (
           <Flashcard flashcard={cardsToRevise[currentCardIndex]} onNext={handleAnswer} />
+        ) : (
+          <p>No more cards to revise.</p>
         )}
       </div>
     </div>
