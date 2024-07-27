@@ -6,7 +6,7 @@ import EditSet from './components/EditSet';
 import ReviseSet from './components/ReviseSet';
 
 function App() {
-  const [theme, setTheme] = useState('day'); // Default theme is 'day'
+  const [theme, setTheme] = useState('day'); 
   const [flashcardSets, setFlashcardSets] = useState([]);
   const [currentPage, setCurrentPage] = useState('home');
   const [currentSet, setCurrentSet] = useState(null);
@@ -32,8 +32,12 @@ function App() {
   };
 
   const handleNextRound = () => {
-    setCurrentSet({ ...currentSet, cards: unknownCards });
-    setUnknownCards([]);
+    if (unknownCards.length > 0) {
+      setCurrentSet({ ...currentSet, cards: unknownCards });
+      setUnknownCards([]);
+    } else {
+      setCurrentPage('home'); 
+    }
   };
 
   return (
